@@ -1,0 +1,36 @@
+#name, #clas
+{
+    text-transform:capitalize;
+}
+.jumbotron {
+    padding-top: 0px;
+    padding-bottom: 34px;
+    background-color: #337ab7;
+}
+.blue {
+    background-color: #337ab7;
+    position:fixed;
+    left:0px;
+    bottom:0px;
+    height:30px;
+    width:100%;
+}
+.py-3 {
+    color: white;
+}
+.stable {
+    width: 50%;
+    margin-bottom: 20px;
+}
+.table>tbody>tr>td {
+    padding: 4px 7px;
+}
+
+.del {
+    padding: 3px 8px;
+    font-size: 12px;
+    font-weight: 400;
+} 
+.subbtn {
+    padding-left: 15px;
+} 
