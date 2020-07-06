@@ -1,4 +1,4 @@
-<?php
+<?php 
 include('conn.php');
 $query = "select * from `students`";
 $res = mysqli_query($conn, $query);
