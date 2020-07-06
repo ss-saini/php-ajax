@@ -1,6 +1,9 @@
-<?php 
+<?php
 include('conn.php');
-$query = "select * from `students`";
+
+$search = $_POST["search"];
+//print_r($search);
+$query = "SELECT * FROM `students` WHERE name LIKE '%$search%' || class LIKE '%$search%' || phone LIKE '%$search%' || marks LIKE '%$search%' ";
 $res = mysqli_query($conn, $query);
 $table = "";
 if(mysqli_num_rows ($res)){
@@ -20,7 +23,9 @@ if(mysqli_num_rows ($res)){
 						<td>$row[class]</td>
 						<td>$row[phone]</td>
 						<td>$row[marks]</td>
-						<td><button class='btn btn-danger del' value=$row[id]>Delete</button></td>
+						<td><button class='btn btn-danger del' value=$row[id]>Delete</button>
+						<a href='edit_records.php?id=$row[id]' class='btn btn-info edit'>Edit</a>
+						</td>
 					  </tr>";
 		}
 	$table .="</table>";

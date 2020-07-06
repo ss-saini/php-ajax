@@ -1,7 +1,6 @@
 <?php
 include('header.php');
 ?>
-<body>
 <div class="container">
 	<form id="sform" name="sform">
   <div class="form-row">
@@ -28,6 +27,9 @@ include('header.php');
   	<input type="submit" class="btn btn-primary" name="sub" id="sub">
   </div>
 </form>
+  <div class="search-box"> 
+    <b>Search:</b><input type="text" name="search" id="search" class="search">
+  </div>
 <center id = "dataTable"></center>
 </div>	
 <?php include('footer.php');?>

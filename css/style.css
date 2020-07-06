@@ -30,7 +30,16 @@
     padding: 3px 8px;
     font-size: 12px;
     font-weight: 400;
-} 
+}
+
+.edit {
+    padding: 3px 8px;
+    font-size: 12px;
+    font-weight: 400;
+}  
 .subbtn {
     padding-left: 15px;
+}
+.search-box {
+    padding-left: 55%;
 } 
