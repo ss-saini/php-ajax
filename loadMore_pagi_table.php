@@ -1,6 +1,6 @@
 <?php include_once('header.php'); ?>
 <div class="container">
-	<div id="table">
+	<div id="table" class="pagination-table">
 		<table border="3" id="tableData" class="table table-striped stable" >
 			<tr> 
 				<th>sr.no</th>

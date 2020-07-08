@@ -9,5 +9,14 @@
 <link rel="stylesheet" href="css/style.css" type="text/css">
 	<title>Form</title>
 </head> 
-<nav class="jumbotron"></nav>
+<nav class="navbar navbar-default">
+  <div class="container">
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="form.php">Home</a></li>
+      <li><a href="loadMore_pagi_table.php">Another Pagination</a></li>
+      <li><a href="serialize_form.php">Serialize Form</a></li>
+    </ul>
+  </div>
+</nav>
+  
 <body>

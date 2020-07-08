@@ -46,4 +46,30 @@
 .lodmore {
     margin: 0 auto;
     display: table;
-} 
+}
+#tableData  {
+    margin: 0 auto;
+    display: table;
+}
+.lod-mor {
+    margin-left: 86%;
+    margin-bottom: -1%;
+}
+hr {
+    border-top: 1px solid #040404;
+}
+.error-mess {
+    color: red;
+    background-color: #f1dadd;
+}
+.success-mess {
+    color: green;
+    background-color: #ddf5dd;
+}
+.navbar-default {
+    background-color: #337ab7;
+    border-color: #337ab7;
+}
+.navbar-default .navbar-nav>li>a {
+    color: #fff;
+}

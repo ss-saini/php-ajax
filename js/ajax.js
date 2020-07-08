@@ -167,3 +167,53 @@ $(document).ready(function(){
 		loadTable(lastRecord);
 	});
 });
+
+//form serlize
+/*$(document).ready(function(){
+  $("#inter").click(function(){
+  	 $('#std').attr("required", "required");
+    $(".std").show(800);
+  });
+  $("#sess").click(function(){
+    $(".std").hide(800);
+  });
+});*/
+
+$(document).ready(function(){
+	$("#serSub").click(function(){
+		var sName = $("#snane").val();
+		var fName = $("#fname").val();
+		var sAge  = $("#age").val();
+		var std   = $("#std").val();
+		var dob   = $("#dob").val();
+		var doa   = $("#doa").val();
+		if(sName == "" || fName == "" ||  sAge == "" ||  std == "" ||  dob == "" ||  doa == "" || !$('input:radio[name=admisonTyp]').is(':checked') )
+		{
+			$(".error-mess").fadeIn(3000).html('<b>Please enter the values in all fields !!!</b>');
+			//$(".mess");
+		}
+		else
+		{
+			$.ajax({
+				url		: "insert_data_serialize.php",
+				type	: "POST",
+				data    : $("#serialForm").serialize(),
+				success : function(data){
+					if(data == 1){
+
+						$("#serialForm").trigger("reset");
+						$(".success-mess").fadeIn(3000).html('<b>Data saved successfully !!!</b>');
+						setTimeout(function(){
+							$(".success-mess").fadeOut()
+						}, 3000);	
+					}
+					else
+					{
+						alert("error");
+					}
+				}
+			});			
+		}
+
+	});
+});

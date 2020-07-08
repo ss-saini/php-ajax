@@ -2,6 +2,10 @@
 include('header.php');
 ?>
 <div class="container">
+<!--   <div class="lod-mor">
+    <a href="loadMore_pagi_table.php" class="btn btn-info" >Another Pagination</a>
+  </div> -->
+  <hr class="line">
 	<form id="sform" name="sform">
   <div class="form-row">
     <div class="form-group col-md-6">
@@ -27,6 +31,7 @@ include('header.php');
   	<input type="submit" class="btn btn-primary" name="sub" id="sub">
   </div>
 </form>
+  <hr>
   <div class="search-box"> 
     <b>Search:</b><input type="text" name="search" id="search" class="search">
   </div>
