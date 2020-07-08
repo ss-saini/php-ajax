@@ -32,7 +32,7 @@ $row=mysqli_fetch_assoc($res);?>
   </div>
   <div class="subbtn">
   	<input type="submit" class="btn btn-primary update" name="update" id="update" value="Update">
-  	<a href="insert_form.php" class="btn btn-info">Cancel</a>
+  	<a href="form.php" class="btn btn-info">Cancel</a>
   </div>
 </form>
 </div>	

@@ -33,6 +33,7 @@ if(mysqli_num_rows ($res)){
 }
 else
 {
-	echo "Record is not found";
+	echo "<h3><b>Record is not found</b></h3>";
 }
+
 ?>

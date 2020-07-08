@@ -31,6 +31,7 @@ include('header.php');
     <b>Search:</b><input type="text" name="search" id="search" class="search">
   </div>
 <center id = "dataTable"></center>
-</div>	
+</div>
+
 <?php include('footer.php');?>
 
