@@ -12,11 +12,10 @@
 <nav class="navbar navbar-default">
   <div class="container">
     <ul class="nav navbar-nav">
-      <li class="active"><a href="form.php">Home</a></li>
-      <li><a href="loadMore_pagi_table.php">Another Pagination</a></li>
-      <li><a href="serialize_form.php">Serialize Form</a></li>
+      <li><a class="active" href="form.php"><b>Home</a></b></li>
+      <li class=""><a href="loadMore_pagi_table.php"><b>Another Pagination</b></a></li>
+      <li class=""><a href="serialize_form.php"><b>Serialize Form</b></a></li>
     </ul>
   </div>
 </nav>
-  
 <body>

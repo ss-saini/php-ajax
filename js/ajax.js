@@ -1,3 +1,23 @@
+//menu active class jquery using a herf link
+/*$(document).ready(function(){
+	var path = window.location.pathname.split("/").pop();
+	if(path == ''){
+		path = 'form.php';
+	}
+	var target = $('li a[href="'+path+'"]');
+	target.addClass('active');
+});
+*/
+
+// jquery adding active class over li
+$(document).ready(function () {
+    var url = window.location;
+    $('ul.nav a[href="'+ url +'"]').parent().addClass('active');
+    $('ul.nav a').filter(function() {
+         return this.href == url;
+    }).parent().addClass('active');
+});
+
 $(document).ready(function() {
 	//load/get all data from database
 /*		function dataload(){
