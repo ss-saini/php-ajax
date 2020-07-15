@@ -1,0 +1,72 @@
+[
+    {
+        "id": "1",
+        "s_name": "Rohan",
+        "f_name": "vijay",
+        "age": "5",
+        "dob": "2015-06-03",
+        "doa": "2020-07-08",
+        "addmission_type": "sessionly",
+        "std": "lkg"
+    },
+    {
+        "id": "8",
+        "s_name": "Raman",
+        "f_name": "vijay",
+        "age": "8",
+        "dob": "2012-06-12",
+        "doa": "2020-07-08",
+        "addmission_type": "intermediatly",
+        "std": "3rd"
+    },
+    {
+        "id": "9",
+        "s_name": "Reena",
+        "f_name": "Ramesh",
+        "age": "6",
+        "dob": "2014-11-19",
+        "doa": "2020-07-08",
+        "addmission_type": "sessionly",
+        "std": "1st"
+    },
+    {
+        "id": "10",
+        "s_name": "kavita",
+        "f_name": "mukesh",
+        "age": "10",
+        "dob": "2010-02-10",
+        "doa": "2020-07-08",
+        "addmission_type": "intermediatly",
+        "std": "4th"
+    },
+    {
+        "id": "11",
+        "s_name": "Aman",
+        "f_name": "yogi",
+        "age": "5",
+        "dob": "2015-03-04",
+        "doa": "2020-07-08",
+        "addmission_type": "sessionly",
+        "std": "1st"
+    },
+    {
+        "id": "12",
+        "s_name": "sanam",
+        "f_name": "arman",
+        "age": "6",
+        "dob": "2014-07-24",
+        "doa": "2020-07-08",
+        "addmission_type": "sessionly",
+        "std": "1st"
+    },
+    {
+        "id": "13",
+        "s_name": "Jerry",
+        "f_name": "David",
+        "age": "7",
+        "dob": "2013-07-18",
+        "doa": "2020-07-08",
+        "addmission_type": "sessionly",
+        "std": "2nd"
+    }
+]

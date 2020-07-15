@@ -9,7 +9,7 @@ else
 {
 	$page = '0';
 }
-$query = "SELECT * FROM `students` LIMIT  $page, $limit_of_records";
+$query = "SELECT * FROM `students` WHERE id > $page LIMIT $limit_of_records";
 $res = mysqli_query($conn, $query);
 if(mysqli_num_rows($res)){
 	$table = "";

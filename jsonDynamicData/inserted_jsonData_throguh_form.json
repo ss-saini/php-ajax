@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Neeraj",
+        "class": "iti",
+        "phone": "78897889",
+        "marks": "300"
+    },
+    {
+        "name": "Haraman",
+        "class": "bsc",
+        "phone": "9878456545",
+        "marks": "350"
+    },
+    {
+        "name": "Jassi",
+        "class": "bca",
+        "phone": "965326545",
+        "marks": "320"
+    },
+    {
+        "name": "sandeep",
+        "class": "ba",
+        "phone": "9638520147",
+        "marks": "330"
+    }
+]

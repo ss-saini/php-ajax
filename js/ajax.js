@@ -184,6 +184,7 @@ $(document).ready(function(){
 	loadTable();
 	$(document).on("click", ".lodmore", function(){
 		var lastRecord = $(this).data("id");
+		//alert(lastRecord);
 		loadTable(lastRecord);
 	});
 });
