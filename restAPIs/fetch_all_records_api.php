@@ -2,7 +2,7 @@
 header('Content-Type: application/json');
 include('../conn.php');
 
-$select = "SELECT * FROM `addmision`";
+$select = "SELECT * FROM `students`";
 $result = mysqli_query($conn, $select);
 if(mysqli_num_rows($result) > 0 ){
 	$data = mysqli_fetch_all($result, MYSQLI_ASSOC);

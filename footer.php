@@ -8,5 +8,6 @@
 </footer>
 <script src="js/validation.js"></script>
 <script src="js/ajax.js"></script>
+<script src="js/apiAjax.js"></script>
 </body>
 </html> 

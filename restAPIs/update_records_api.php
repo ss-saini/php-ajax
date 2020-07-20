@@ -5,11 +5,11 @@ header('Access-Control-Allow-Headers: Content-Type,Access-Control-Allow-Method,A
 include ('../conn.php');
 
 $data 	= json_decode(file_get_contents("php://input"),true);
-$id 	= $data['id']; 
-$name 	= $data['name']; 
-$class 	= $data['class'];
-$phone 	= $data['phone'];
-$marks 	= $data['marks'];
+$id 	= $data['eid']; 
+$name 	= $data['ename']; 
+$class 	= $data['eclass'];
+$phone 	= $data['ephone'];
+$marks 	= $data['emarks'];
 
 $update = "UPDATE `students` SET name='$name', class='$class', phone ='$phone', marks='$marks' WHERE id = $id";
 $result = mysqli_query($conn, $update);

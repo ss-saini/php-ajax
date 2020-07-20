@@ -3,11 +3,11 @@ header('Content-Type: application/json');
 header('Access-Control-Allow-Origin:*');
 include('../conn.php');
 
-//you have to give id through postmen to run this api
+//you have to give id through postmen to run this api or form 
 $id = json_decode(file_get_contents("php://input"), true);
-$stu_id = $id['stuId'];
+$stu_id = $id['sid']; //from apiajax edit
 
-$select = "SELECT * FROM `addmision` WHERE id = '$stu_id' ";
+$select = "SELECT * FROM `students` WHERE id = '$stu_id' ";
 $result = mysqli_query($conn, $select);
 if(mysqli_num_rows($result) > 0 ){
 	$data = mysqli_fetch_all($result, MYSQLI_ASSOC);

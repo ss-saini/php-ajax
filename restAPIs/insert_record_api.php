@@ -7,23 +7,22 @@ include ('../conn.php');
 
 $data = json_decode(file_get_contents("php://input"),true);
 
-$name = $data['name']; 
+$name  = $data['name']; 
 $class = $data['class'];
 $phone = $data['phone'];
 $marks = $data['marks'];
 if(!empty($name && $class && $phone && $marks)){
-$insert = "INSERT INTO `students` (name, class, phone, marks) VALUES ('$name', '$class', '$phone',
-	 '$marks')";
-$result = mysqli_query($conn, $insert);
-$res = mysqli_affected_rows($conn);
-if($res > 0)
-{
-	echo json_encode(array('message'=> 'Data inserted', 'status'=> true));
-}	 
-else
-{
-	echo json_encode(array('message'=> 'Data not inserted', 'status'=> false));
-}
+	$insert = "INSERT INTO `students` (name, class, phone, marks) VALUES ('$name', '$class', '$phone','$marks')";
+	$result = mysqli_query($conn, $insert);
+	$res = mysqli_affected_rows($conn);
+	if($res > 0)
+	{
+		echo json_encode(array('message'=> 'Data Inserted Successfully !!!', 'status'=> true));
+	}	 
+	else
+	{
+		echo json_encode(array('message'=> 'Data Not Inserted !!!', 'status'=> false));
+	}
 }
 
 else

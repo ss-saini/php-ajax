@@ -101,7 +101,7 @@ $(document).ready(function() {
 					}
 					else
 					{
-						alert('error');
+						alert("error");
 					}
 				}	
 			});
@@ -130,7 +130,7 @@ $(document).on("click", "#update", function(e){
 					}
 					else
 					{
-						alert(error);
+						alert("error");
 					}
 			} 
 		});
