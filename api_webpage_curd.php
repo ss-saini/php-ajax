@@ -1,9 +1,7 @@
 <?php
 include('header.php');
 ?>
-<div class="container">
-<div class="error-mess"></div>
-<div class="success-mess" ></div>   
+<div class="container">  
   <hr class="line">
 	<form id="apiform" name="sform">
   <div class="form-row">
@@ -31,10 +29,12 @@ include('header.php');
   </div>
 </form>
   <hr>
-<!--   <div class="search-box"> 
-    <b>Search:</b><input type="text" name="search" id="search" class="search">
-  </div> -->
   <div class="els-msg"></div>
+  <div class="error-mess"></div>
+  <div class="success-mess" ></div> 
+  <div class="search-box-box"> 
+    <b>Search:</b><input type="text" class="search-input" name="search" placeholder="search by name">
+  </div> 
   <table class="table table-striped" border="2">
   <thead>
     <tr>

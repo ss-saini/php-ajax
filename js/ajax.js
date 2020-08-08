@@ -2,7 +2,7 @@
 /*$(document).ready(function(){
 	var path = window.location.pathname.split("/").pop();
 	if(path == ''){
-		path = 'form.php';
+		path = 'index.php';
 	}
 	var target = $('li a[href="'+path+'"]');
 	target.addClass('active');
@@ -126,7 +126,7 @@ $(document).on("click", "#update", function(e){
 			success :function(data){
 					if(data == 1)
 					{
-						$(location).attr('href', 'form.php');
+						$(location).attr('href', 'index.php');
 					}
 					else
 					{
@@ -152,7 +152,7 @@ $("#search").on("keyup",function(){
 	}
 	else
 	{
-		$(location).attr('href', 'form.php');
+		$(location).attr('href', 'index.php');
 	}
 });
 

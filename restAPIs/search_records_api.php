@@ -2,15 +2,14 @@
 header('Content-Type:application/json');
 include('../conn.php');
 
-/*$search_value = json_decode(file_get_contents("php://input"),true);
-$stu_name = $search_value['sname'];*/
+$search_value = json_decode(file_get_contents("php://input"),true);
+$srchValue = $search_value["sname"];
 
 //passing search value through url
+//$stu_name = isset($_GET['sname']) ? $_GET['sname'] : die("Enter some value in url");
 
-$stu_name = isset($_GET['sname']) ? $_GET['sname'] : die("Enter some value in url");
-
-if(!empty($stu_name)){
-	$search = "SELECT * FROM `addmision` WHERE s_name LIKE '$stu_name%' ";
+/*if($srchValue){*/
+	$search = "SELECT * FROM `students` WHERE name LIKE '$srchValue%' ";
 	$result = mysqli_query($conn, $search);
 	if(mysqli_num_rows($result) > 0){
 		$data = mysqli_fetch_all($result, MYSQLI_ASSOC);
@@ -18,11 +17,11 @@ if(!empty($stu_name)){
 	}
 	else
 	{
-		echo json_encode(array('message'=> 'no records found'));
+		echo json_encode(array('message'=> 'no records found', 'status'=> false));
 	}
-}
+/*}
 else
 {
 	echo json_encode(array('message'=> 'Enter some value for search!!!'));
-}
+}*/
 ?>

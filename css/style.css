@@ -9,13 +9,11 @@
 }
 .blue {
     background-color: #337ab7;
-    left:0px;
-    bottom:0px;
-    height:30px;
     width:100%;
 }
 .py-3 {
     color: white;
+    padding: 7px 0px;
 }
 .stable {
     width: 50%;
@@ -71,4 +69,10 @@ hr {
 }
 .navbar-default .navbar-nav>li>a {
     color: #fff;
+}
+.search-box-box {
+    padding-left: 79%;
+}
+.search-input {
+    width: 188px;
 }

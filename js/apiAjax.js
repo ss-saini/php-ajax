@@ -20,7 +20,7 @@ $(document).ready(function(){
 							+"<td>" + value.phone + "</td>"
 							+"<td>" + value.marks + "</td>"
 							+"<td><button class='btn btn-info redit' value='"+value.id+"' data-toggle='modal' data-target='#exampleModal'>Edit</button>"+" | "
-							+"<button class='btn btn-danger' value='"+value.id+"'>Delete</button></td>"
+							+"<button class='btn btn-danger rdelete' value='"+value.id+"'>Delete</button></td>"
 							+"</tr>");	
 					});
 				}
@@ -52,13 +52,13 @@ $(document).ready(function(){
 			$('.success-mess').html(message).slideDown();
 					setTimeout(function(){
 						$('.success-mess').slideUp()
-						}, 3000);
+						}, 4000);
 		}
 		else if(status == false){
 				$('.error-mess').html(message).slideDown();
 					setTimeout(function(){
 						$('.error-mess').slideUp()
-						}, 3000);
+						}, 4000);
 			}
 		}
 
@@ -87,9 +87,9 @@ $(document).ready(function(){
 
 	// Edit Records using api
 	$(document).on("click", ".redit", function(){
-		var getId = $(this).val();
-		var obj = { sid: getId };
-		var jsonid = JSON.stringify(obj);
+		var getId = $(this).val();			//student id geting form button 
+		var obj = { sid: getId };			//converting id into in object form
+		var jsonid = JSON.stringify(obj);	// object to json 
 
 		$.ajax({
 			url		: "http://localhost/phpajax/restAPIs/fetch_single_record_api.php",
@@ -108,9 +108,7 @@ $(document).ready(function(){
 	//Update Records using api
 	$('#eupadate').on("click", function(e){
 		e.preventDefault();
-		//var json_data = jsonData("#erecords");
 		var json_data = jsonData("#editRecord");
-		console.log(json_data);
 		if(json_data == false){
 			messages("All fields are requird !!!", false);
 		}
@@ -127,4 +125,93 @@ $(document).ready(function(){
 		}
 	});
 
+	//Delete records
+	$(document).on("click", ".rdelete", function() {
+		if(confirm("Are you really want to delete this record ??")){
+			var sid = $(this).val();						//student id geting form button 
+			var objData = { stId: sid };					//converting id into in object form
+			var jsonData = JSON.stringify(objData);			// object to json 
+			var row = this;
+
+			$.ajax({
+				url		: "http://localhost/phpajax/restAPIs/detete_record_api.php",
+				type	: "POST",
+				data 	: jsonData,
+				success : function (data) {
+					messages(data.message, data.status);
+ 					if(data.status == true){
+						$(row).closest("tr").fadeOut();
+					} 
+				},
+				error: function(xhr, status, error){
+					var errorMessage = xhr.status + ': ' + xhr.statusText
+					alert('Error - ' + errorMessage);
+					}	
+			});
+		}
+	});
+
+	// search
+	$(".search-input").on("keyup", function(){
+		$('#tabBody').html("");
+		var value  = $(this).val();
+		var object = { sname: value };
+		var json_value = JSON.stringify(object);
+		if(json_value){
+			$.ajax({
+				url		: "http://localhost/phpajax/restAPIs/search_records_api.php",
+				type	: "POST",
+				data 	: json_value,
+				success : function(data) {
+					if(data.status == false){
+						messages(data.message, data.status);
+					}
+					else
+					{
+						//console.log(data);
+						$.each(data, function(key,value){
+							$('#tabBody').append("<tr>" 
+								+"<td>" + value.id + "</td>"
+								+"<td>" + value.name + "</td>"
+								+"<td>" + value.class + "</td>"
+								+"<td>" + value.phone + "</td>"
+								+"<td>" + value.marks + "</td>"
+								+"<td><button class='btn btn-info redit' value='"+value.id+"' data-toggle='modal' data-target='#exampleModal'>Edit</button>"+" | "
+								+"<button class='btn btn-danger rdelete' value='"+value.id+"'>Delete</button></td>"
+								+"</tr>");	
+						});
+					}				
+				}
+			});
+		}
+	})
+
+	function loadCountry(selData, targetId) {
+		$.ajax({
+			url		: "dependent_select.php",
+			type	: "POST",
+			data 	: { selData: selData, targetId: targetId},	
+			success : function(data) {
+				if(selData == "city"){
+					$("#city").html(data);
+				}
+				else if(selData == "state"){
+						$("#state").html(data);
+				}
+				else
+				{
+					$("#country").append(data);					
+				}
+			}
+		});
+	}
+	loadCountry();
+	$("#country").on("change", function(){
+		var countryId = $(this).val();
+		loadCountry("state", countryId);		//passing state as a static value and selected country id
+	});
+	$("#state").on("change", function(){
+		var stateId = $(this).val();
+		loadCountry("city", stateId);	
+	});
 });

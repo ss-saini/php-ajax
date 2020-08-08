@@ -1,6 +1,5 @@
 <?php
 header('Content-Type: application/json');
-//header('Access-Content-Allow-Origin:*');
 header('Access-Control-Allow-Method: POST');
 header('Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Method,Access-Control-Allow-Headers, X-Requested-With');
 include ('../conn.php');
@@ -24,7 +23,6 @@ if(!empty($name && $class && $phone && $marks)){
 		echo json_encode(array('message'=> 'Data Not Inserted !!!', 'status'=> false));
 	}
 }
-
 else
 {
 	echo json_encode(array('message'=> 'All fields are required.'));
