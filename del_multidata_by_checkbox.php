@@ -24,7 +24,6 @@ $(document).ready(function(){
         $.ajax({
             url      : "phpCode_del_multidata_by_checkbox.php",
             type     : "GET",
-            //dataType : "json",
             success : function(data){
             $.each(JSON.parse(data), function(key,value){
                 $("#tbody").append("<tr>"
