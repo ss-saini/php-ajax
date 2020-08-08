@@ -16,8 +16,8 @@
       <li><a class="active" href="index.php"><b>Home</a></b></li>
       <li class=""><a href="loadMore_pagi_table.php"><b>Another Pagination</b></a></li>
       <li class=""><a href="serialize_form.php"><b>Serialize Form</b></a></li>
-      <li class=""><a href="get&show_jsonData.php"><b>Json data preview</b></a></li>
       <li class=""><a href="api_webpage_curd.php"><b>webpage curd Api</b></a></li>
+      <li class=""><a href="del_multidata_by_checkbox.php"><b>Del mutli record</b></a></li>
     </ul>
   </div>
 </nav>
