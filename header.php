@@ -17,7 +17,9 @@
       <li class=""><a href="loadMore_pagi_table.php"><b>Another Pagination</b></a></li>
       <li class=""><a href="serialize_form.php"><b>Serialize Form</b></a></li>
       <li class=""><a href="api_webpage_curd.php"><b>webpage curd Api</b></a></li>
-      <li class=""><a href="del_multidata_by_checkbox.php"><b>Del mutli record</b></a></li>
+      <li class=""><a href="del_multidata_by_checkbox.php"><b>Delete mutli record</b></a></li>
+      <li class=""><a href="image_upload_html.php"><b>Image Upload Ajax</b></a></li>
+      <li class=""><a href="insert_checkbox_val_html.php"><b>Insert checkbox ajax</b></a></li>
     </ul>
   </div>
 </nav>
